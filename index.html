@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kelas IX F SMP Negeri 3 Ciawi Bogor</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fb;
+      color: #222;
+    }
+
+    header {
+      background-color: #002b5b;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background-color: #014f86;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 12px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffc300;
+    }
+
+    .motivasi {
+      background-color: #d9edff;
+      color: #002b5b;
+      padding: 10px 0;
+      text-align: center;
+      font-weight: 600;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .motivasi span {
+      display: inline-block;
+      animation: berjalan 20s linear infinite;
+    }
+
+    @keyframes berjalan {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      color: #014f86;
+      border-bottom: 2px solid #014f86;
+      padding-bottom: 5px;
+    }
+
+    footer {
+      background-color: #002b5b;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kelas IX F SMP Negeri 3 Ciawi Bogor</h1>
+    <p>Belajar, Berkarya, dan Menginspirasi</p>
+  </header>
+
+  <div class="motivasi">
+    <span id="teksMotivasi"></span>
+  </div>
+
+  <nav>
+    <a href="#jadwal">Jadwal Pelajaran</a>
+    <a href="#galeri">Galeri Kegiatan</a>
+    <a href="#informasi">Informasi Kelas</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <section id="jadwal">
+    <h2>Jadwal Pelajaran</h2>
+    <p>Tambahkan jadwal pelajaran mingguan di sini.</p>
+  </section>
+
+  <section id="galeri">
+    <h2>Galeri Kegiatan</h2>
+    <p>Bagikan foto-foto kegiatan kelas, lomba, dan acara sekolah di sini.</p>
+  </section>
+
+  <section id="informasi">
+    <h2>Informasi Kelas</h2>
+    <p>Tulis pengumuman penting, tugas, atau berita terbaru dari wali kelas dan pengurus kelas.</p>
+  </section>
+
+  <section id="kontak">
+    <h2>Kontak</h2>
+    <p>Hubungi kami di: <strong>ixf.smpn3ciawi@gmail.com</strong></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Kelas IX F SMP Negeri 3 Ciawi Bogor</p>
+  </footer>
+
+  <script>
+    const motivasiList = [
+      "Tetap semangat belajar dan raih cita-cita!",
+      "Gagal sekali bukan berarti gagal selamanya.",
+      "Disiplin adalah kunci menuju kesuksesan.",
+      "Setiap hari adalah kesempatan baru untuk jadi lebih baik.",
+      "Belajar bukan untuk nilai, tapi untuk masa depanmu.",
+      "Berani mencoba adalah langkah pertama menuju keberhasilan.",
+      "Semangatmu hari ini menentukan hasilmu esok hari.",
+      "Kesuksesan dimulai dari tekad yang kuat.",
+      "Tidak ada usaha yang sia-sia bila kamu terus berjuang.",
+      "Percayalah pada dirimu sendiri!"
+    ];
+
+    const hariIni = new Date().getDate();
+    const teks = motivasiList[hariIni % motivasiList.length];
+    document.getElementById("teksMotivasi").textContent = teks;
+  </script>
+</body>
+</html>
